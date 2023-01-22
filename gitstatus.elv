@@ -3,11 +3,7 @@ use file
 use str
 
 # the folder where the gitstatusd related data is stored
-if (has-env XDG_DATA_HOME) {
-  var appdir = $E:XDG_DATA_HOME/elvish/package-data/gitstatus
-} else {
-  var appdir = $E:HOME/.local/share/elvish/package-data/gitstatus
-}
+var appdir = $E:HOME/.local/share/elvish/package-data/gitstatus
 
 # use the same exact calls as gitstatus (despite having the platform module)
 var arch = (str:to-lower (uname -m))
